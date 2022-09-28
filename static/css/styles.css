@@ -106,6 +106,13 @@ width: 50%;
 	text-decoration: underline;
 }
 
+
 .result-box li{
 	font-weight: bold;
+	margin-bottom: 15px;
+}
+
+
+span.result{
+	border-bottom: red 2px dotted;
 }

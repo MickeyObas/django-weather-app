@@ -1,3 +1,4 @@
 *.pyc
 */models.py
 db.sqlite3
+test.py

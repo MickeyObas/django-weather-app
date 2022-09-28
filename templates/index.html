@@ -12,17 +12,22 @@
 					</p>
 				</div>
 				<div class="weather-form">
-					<form class="flex">
+					<form class="flex" action="" method="post">
+						{% csrf_token %}
 						<input type="text" name="location" placeholder="Enter a town, city or state">
 						<button class="btn">Fetch</button>
 					</form>
 					<div class="result-box">
 						<h1>The Results</h1>
 						<ul>
-							<li>Location: Dummy</li>
-							<li>Time: Dummy</li>
-							<li>Weather: Dummy</li>
-							<li>Description: Dummy</li>
+							{% if location %}
+							<li>Location: <span class="result">{{location}}, {{country}}</span>.</li>
+							{% else %}
+							<li>Location: <span  class="result">{{location}} {{country}}</span></li>
+							{% endif %}
+							<li>Region: <span class="result">{{region}}</span></li>
+							<li>Time: <span class="result">{{time}}</span></li>
+							<li>Weather: <span class="result">{{condition}}</span></li>
 						</ul>
 					</div>
 				</div>
